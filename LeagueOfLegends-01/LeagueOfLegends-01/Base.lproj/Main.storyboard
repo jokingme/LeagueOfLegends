@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S1f-kU-zKs">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--资讯-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ZXViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EkQ-H6-AOs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="资讯" image="tab_icon_news_normal" selectedImage="tab_icon_news_press" id="fpL-aJ-HFK"/>
+                    <navigationItem key="navigationItem" id="o2Q-nS-C9H">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ZXScrollView" destination="EkQ-H6-AOs" id="Pi5-xL-bUo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42.5" y="1267.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ypy-6a-daq">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="S1f-kU-zKs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="uRl-zN-3Xn">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="hh6-5z-ncY"/>
+                        <segue destination="Kye-yv-7hV" kind="relationship" relationship="viewControllers" id="TcG-8t-Hgx"/>
+                        <segue destination="ZgP-Xo-ePy" kind="relationship" relationship="viewControllers" id="8Cs-je-3KL"/>
+                        <segue destination="Dh1-l7-HLu" kind="relationship" relationship="viewControllers" id="yOd-qi-qhg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6f-iy-KPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684.5" y="449.5"/>
+        </scene>
+        <!--Friends View Controller-->
+        <scene sceneID="3LI-eY-Bwa">
+            <objects>
+                <viewController id="6W7-x3-eVL" customClass="FriendsViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JaV-d1-ZaW">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="vYe-CK-lMS">
+                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.66641019570707072" green="0.66641019570707072" blue="0.66641019570707072" alpha="1" colorSpace="calibratedRGB"/>
+                            <segments>
+                                <segment title="好友"/>
+                                <segment title="消息"/>
+                            </segments>
+                            <color key="tintColor" red="1" green="0.79158958030000004" blue="0.16635832110000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jyk-Qr-NZM">
+                            <color key="tintColor" red="0.89719460227272729" green="0.71157124583075149" blue="0.12919267802689743" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="FriendsRightBarButton" destination="jyk-Qr-NZM" id="wJs-r9-8uR"/>
+                        <outlet property="FriendsSegmentControl" destination="vYe-CK-lMS" id="aKJ-rn-QIQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQS-TG-DFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435.5" y="2041.5"/>
+        </scene>
+        <!--好友-->
+        <scene sceneID="yYq-gL-WpG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kye-yv-7hV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="好友" image="tab_icon_friend_normal" selectedImage="tab_icon_friend_press" id="Mad-Kj-10X"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zqm-Q0-EdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.14117647058823529" green="0.16078431372549018" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.14117647058823529" green="0.16078431372549018" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.14117647058823529" green="0.16078431372549018" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6W7-x3-eVL" kind="relationship" relationship="rootViewController" id="2MB-7D-CF8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="elP-2I-oEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530.5" y="1257.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tHU-hZ-7cH">
+            <objects>
+                <viewController id="Oia-6e-NrF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZJk-B2-KDk"/>
+                        <viewControllerLayoutGuide type="bottom" id="bRx-uZ-cCm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Hi-UJ-0vL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Ic-U8-Rog"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgu-H6-hy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.5" y="2081.5"/>
+        </scene>
+        <!--发现-->
+        <scene sceneID="wKp-Vw-vj0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZgP-Xo-ePy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="发现" image="tab_icon_quiz_normal" selectedImage="tab_icon_quiz_press" id="HiP-gu-vTb"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l6w-E9-7QS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14117647058823529" green="0.16078431372549018" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Oia-6e-NrF" kind="relationship" relationship="rootViewController" id="jNG-gr-Xib"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Tf-XF-V3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954.5" y="1257.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LAO-NB-WF4">
+            <objects>
+                <viewController id="oJS-M0-mVd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KDw-tP-Yeb"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZLe-Zv-fWg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2tT-KJ-ldg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LeQ-RW-qdM"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uki-qF-g6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1460.5" y="2160.5"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="nIu-xl-vGt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dh1-l7-HLu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我" image="tab_icon_more_normal" selectedImage="tab_icon_more_press" id="hrc-cS-n7m"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6pC-Gr-bQ2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14117647058823529" green="0.16078431372549018" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oJS-M0-mVd" kind="relationship" relationship="rootViewController" id="BXO-xE-plG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1b-mM-DQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1460.5" y="1258.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_icon_friend_normal" width="320" height="480"/>
+        <image name="tab_icon_friend_press" width="320" height="480"/>
+        <image name="tab_icon_more_normal" width="320" height="480"/>
+        <image name="tab_icon_more_press" width="320" height="480"/>
+        <image name="tab_icon_news_normal" width="320" height="480"/>
+        <image name="tab_icon_news_press" width="320" height="480"/>
+        <image name="tab_icon_quiz_normal" width="320" height="480"/>
+        <image name="tab_icon_quiz_press" width="320" height="480"/>
+    </resources>
+</document>
